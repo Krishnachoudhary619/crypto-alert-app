@@ -116,10 +116,10 @@ export default function Home() {
       </Head>
 
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-center mb-8">Cryptocurrency Price Alerter</h1>
+        <h1 className="text-3xl font-bold text-center mb-8 text-black">Cryptocurrency Price Alerter</h1>
         
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          <h2 className="text-xl font-semibold mb-4">Alert Settings</h2>
+          <h2 className="text-xl font-semibold mb-4 text-black">Alert Settings</h2>
           
           <div className="mb-4">
             <label className="block text-gray-700 mb-2" htmlFor="email">
@@ -128,7 +128,7 @@ export default function Home() {
             <input
               type="email"
               id="email"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-black"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={isSubscribed}
@@ -145,7 +145,7 @@ export default function Home() {
               <input
                 type="number"
                 id="threshold"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md text-black"
                 value={threshold}
                 onChange={(e) => setThreshold(Number(e.target.value))}
                 disabled={isSubscribed}
@@ -162,7 +162,7 @@ export default function Home() {
               <input
                 type="number"
                 id="interval"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md text-black"
                 value={interval}
                 onChange={(e) => setInterval(Number(e.target.value))}
                 disabled={isSubscribed}
@@ -197,12 +197,12 @@ export default function Home() {
         </div>
         
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold mb-4">Select Cryptocurrencies</h2>
+          <h2 className="text-xl font-semibold mb-4 text-black">Select Cryptocurrencies</h2>
           
           <div className="mb-4">
             <input
               type="text"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-black"
               placeholder="Search cryptocurrencies..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -226,11 +226,11 @@ export default function Home() {
                 >
                   <img src={crypto.image} alt={crypto.name} className="w-8 h-8 mr-3" />
                   <div className="flex-1">
-                    <h3 className="font-medium">{crypto.name}</h3>
+                    <h3 className="font-medium text-black" >{crypto.name}</h3>
                     <p className="text-gray-500 text-sm">{crypto.symbol.toUpperCase()}</p>
                   </div>
                   <div className="text-right">
-                    <p className="font-medium">${crypto.current_price.toLocaleString()}</p>
+                    <p className="font-medium text-black">${crypto.current_price.toLocaleString()}</p>
                     <p className={crypto.price_change_percentage_24h >= 0 ? 'text-green-500' : 'text-red-500'}>
                       {crypto.price_change_percentage_24h.toFixed(2)}%
                     </p>
